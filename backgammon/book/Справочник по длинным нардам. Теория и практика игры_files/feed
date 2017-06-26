@@ -1,0 +1,3209 @@
+        topadvertCallbacks["gFQ6ZUe2hK"](
+            ({
+                init: function () {
+                    var that = this;
+                    return {
+                        process: function (adapter, loadJSAPI) {
+                            that._adapter = adapter;
+                            that._data = {"advs":[],"ref_url":"http://www.topadvert.ru/?ref_id=4773"};
+                            that._params = {adv_limit:1,alt_text:"",book_author:"Ахундов Назим",book_name:"Справочник по длинным нардам. Теория и практика игры",catalog_url:"",city_where:"в Запорожье",city_whither:"в Запорожье",component:"",feed_id:5296,format:"where_to_buy",has_image:0,hit_feed_id:5296,hit_pattern_id:2266,is_available:0,is_partner:0,item_id:null,item_page_limit:10,item_page_this:1,limit:10,pattern_id:2266,search:"",sub_id:null,title:""};
+                            that._widgetAPI = (function () {
+                                var loadJSAPIClass = loadJSAPI.getClass();
+                                var classHash = {};
+                                classHash['Object'] = loadJSAPIClass;
+                                classHash['Widgets.URLParams'] = (function () {
+                                    var Class = loadJSAPIClass.extend({});
+                                    Class.get = function () {
+                                        return loadJSAPI.getURLParams().get();
+                                    };
+                                    Class.set = function (args) {
+                                        return loadJSAPI.getURLParams().set(args);
+                                    };
+                                    return Class;
+                                })();
+                                classHash['Widgets.Utils'] = (function () {
+                                    var Class = loadJSAPIClass.extend({});
+                                    Class.get_image_url = function (name) {
+                                        return "https://image.adrelayer.com/widgets/" + name;
+                                    };
+                                    Class.getImageUrl = function (name) {
+                                        return "https://image.adrelayer.com/widgets/" + name;
+                                    };
+                                    return Class;
+                                })();
+                                return {
+                                    getClass: function (path) {
+                                        return classHash[path];
+                                    }
+                                };
+                            })();
+                            that._setup(window);
+                        }
+                    };
+                },
+                _setup: function (window, undefined) {
+                    var Topadvert = this._widgetAPI;
+                    var data = this._data;
+                    var params = this._params;
+                    var Taq = Topadvert.getClass('Widgets.URLParams');
+                            this._widgetClasses = {};
+        this._componentFactories = {};
+        (function (componentFactories, widgetClasses) {
+            var ComponentFactory = Topadvert.getClass('Object').extend({
+                init: function (widget_full_name, factories, settings) {
+                    this.widget_full_name = widget_full_name;
+                    this.factories = factories;
+                    this.settings = settings;
+                },
+                create: function (data, params) {
+                    var widget_class = widgetClasses[this.widget_full_name]
+                    return new widget_class(this.settings, this.factories, data, params);
+                }
+            });
+            componentFactories[''] = new ComponentFactory(
+    'WhereToBuyBase.BlockBase.StandartBlock',
+    {
+    },
+    {
+        close_icon: {
+            height: '8px',
+            indent: '4px',
+            src: 'x-gray-small.gif',
+            title: 'Закрыть',
+            width: '8px'
+        },
+        favicon: {
+            enabled: '0',
+            height: '16px',
+            indent: '2px',
+            valign: 'middle',
+            width: '16px'
+        },
+        footer: {
+            bold: '0',
+            color: '#457baa',
+            font_family: 'Arial, Sans-serif',
+            font_size: '12px',
+            font_style: 'normal',
+            onmouseover_color: '#457baa',
+            roll_up_text: 'Свернуть список',
+            text_align: 'center',
+            underline: '1',
+            underline_indent: '1px',
+            underline_style: 'dashed',
+            underline_width: '1px'
+        },
+        general: {
+            activation_event_type: 'click',
+            background_color: 'white',
+            indent: '5px',
+            outline: '4px',
+            vertical_align_fixer: '1px'
+        },
+        header: {
+            bold: '1',
+            color: '#5f5f5f',
+            enabled: '1',
+            font_family: 'Tahoma, Geneva, Arial, Helvetica, sans-srif',
+            font_size: '12px',
+            font_style: 'normal',
+            text: 'Купить эту книгу:',
+            text_align: 'left',
+            use_param_title: '0'
+        },
+        nothing_found: {
+            align: 'center',
+            background_color: 'transparent',
+            bold: '0',
+            color: '#444444',
+            font_family: 'Arial, Sans-serif',
+            font_size: '12px',
+            font_style: 'normal',
+            margin_bottom: '0',
+            margin_left: '0',
+            margin_right: '0',
+            margin_top: '0',
+            text: 'Товар в продаже не найден'
+        },
+        offer_block: {
+            comparing_param_name: 'ppc',
+            even_bgcolor: 'transparent',
+            extended_offer_list_length: '5',
+            font_family: 'Arial, Sans-serif',
+            odd_bgcolor: 'transparent',
+            short_offer_list_length: '5',
+            short_offer_list_length_deviation: '1',
+            width: '200px'
+        },
+        offer_block_title: {
+            background_color: 'transparent',
+            bold: '0',
+            color: '#7E7E7E',
+            enabled: '0',
+            font_family: 'Arial, Sans-serif',
+            font_size: '12px',
+            font_style: 'normal'
+        },
+        popup_block: {
+            border_color: '#CBCBCB',
+            border_radius: '5px',
+            border_style: 'solid',
+            border_width: '1px',
+            close_timeout: '15',
+            redirect_url: '',
+            xDiv: '5',
+            yDiv: '0'
+        },
+        price: {
+            bold: '0',
+            color: '#00C',
+            enabled: '0',
+            font_size: '12px',
+            font_style: 'normal',
+            format: '%PRICE%',
+            mouseover_underline: '1',
+            onmouseover_color: 'red',
+            title: 'Цена',
+            underline: '1',
+            valign: 'middle'
+        },
+        service_icon: {
+            enabled: '0',
+            height: '12px',
+            src: 'i2-transparent.gif',
+            title: 'Рекламная сеть Topadvert',
+            url: 'http://www.topadvert.ru/',
+            width: '12px'
+        },
+        shop_name: {
+            align: 'left',
+            bold: '0',
+            color: '#457baa',
+            font_size: '12px',
+            font_style: 'normal',
+            format: '«%SHOP%» &ndash; %PRICE%',
+            mouseover_underline: '1',
+            onmouseover_color: '#457baa',
+            title: 'Интернет-магазин',
+            underline: '1',
+            valign: 'middle'
+        },
+        static_block: {
+            margin_bottom: '10px',
+            margin_left: '0',
+            margin_right: '0',
+            margin_top: '0',
+            show_not_found_sticker: '0'
+        },
+        testing: {
+            enabled: '1'
+        }
+    }
+);
+
+        })(this._componentFactories, this._widgetClasses);
+this._widgetClasses['WhereToBuyBase'] = Topadvert.getClass('Object').extend({
+init: function (settings, factories, data, params) {
+    this.components = {};
+    this.settings = settings;
+    this.factories = factories;
+    this.params = params;
+    this.taq_params = Taq.get();
+    
+    for (var param_name in this.taq_params.common_params) {
+        if (!this.params.hasOwnProperty(param_name)) {
+            this.params[param_name] = this.taq_params.common_params[param_name];
+        }
+    }
+    if (this.taq_params.hasOwnProperty('taq_params')
+            && this.taq_params.hasOwnProperty('components_params')
+            && this.taq_params.components_params.hasOwnProperty(this.params.component)) {
+        for (var param_name in this.taq_params.components_params[this.params.component]) {
+            if (!this.params.hasOwnProperty(param_name)) {
+                this.params[param_name] = this.taq_params.components_params[this.params.component][param_name];
+            }
+        }
+    }
+    
+    this.utils = Topadvert.getClass("Widgets.Utils");
+    this.data = data;
+    this.default_close_timeout = 1; // in seconds
+    this.showed = false;
+    
+    this.sortData(this.data);
+},
+
+getDefaultSortingParamName: function () {
+    return 'ppc';
+},
+
+// must be redefined:
+getSortingParamName: function () {
+    return this.getDefaultSortingParamName();
+},
+
+sortData: function (data) {
+    data.advs.sort(
+        this.getCompareCallback(
+            this.getSortingParamName()
+        )
+    );
+},
+
+getCompareCallback: function (comparing_param_name) {
+    if (comparing_param_name == 'ppc' || comparing_param_name == 'pps') {
+        var get_ppc = function (item) {
+            if (item.hasOwnProperty('ppc')) {
+                return item.ppc;
+            } else if (item.hasOwnProperty('pps')) {
+                return item.pps;
+            }
+            return 0;
+        };
+        return function (a, b) {
+            var v1 = get_ppc(a);
+            var v2 = get_ppc(b);
+            if (v1 < v2) {
+                return 1;
+            } else if (v1 > v2) {
+                return -1;
+            }
+            return 0;
+        }
+    } else if (comparing_param_name == 'view_normalized_cost') {
+        return function (a, b) {
+            if (!a.items[0].hasOwnProperty(comparing_param_name) || !b.items[0].hasOwnProperty(comparing_param_name)) {
+                return 0;
+            }
+            if (a.items[0][comparing_param_name] < b.items[0][comparing_param_name]) {
+                return -1;
+            } else if (a.items[0][comparing_param_name] > b.items[0][comparing_param_name]) {
+                return 1;
+            }
+            return 0;
+        };
+    } else if (comparing_param_name == 'adv_host') {
+        return function (a, b) {
+            if (!a.items[0].hasOwnProperty(comparing_param_name) || !b.items[0].hasOwnProperty(comparing_param_name)) {
+                return 0;
+            }
+            if (a.items[0][comparing_param_name] < b.items[0][comparing_param_name]) {
+                return -1;
+            } else if (a.items[0][comparing_param_name].toString() > b.items[0][comparing_param_name].toString()) {
+                return 1;
+            }
+            return 0;
+        };
+    }
+    return function (a, b) {
+        return 0;
+    };
+},
+
+cleanSettingsValue: function (value) {
+    return value.replace(
+        /\"/g, ""
+    ).replace(
+        /\'/g, ""
+    );
+},
+
+add_event: function (obj, event, handler) {
+    if (obj.addEventListener) {
+        obj.addEventListener(event, handler, false);
+    } else if (obj.attachEvent) {
+        obj.attachEvent('on' + event, handler);
+    }
+},
+
+load_component: function (data, params, name, alias) {
+    if (!name || !this.factories.hasOwnProperty(name)) {
+        return false;
+    }
+    var factory = this.factories[name];
+    if (alias == undefined || !alias) {
+        alias = name;
+    }
+    this.components[alias] = factory.create(data, params);
+    return true;
+},
+
+get_currency_string: function (abbreviation) {
+    var hash = {
+        'BLR': 'бел. р.',
+        'EUR': '&euro;',
+        'KZT': 'тнг.',
+        'RUB': 'р.',
+        'UAH': 'грн.',
+        'USD': '$'
+    };
+    if (hash.hasOwnProperty(abbreviation)) {
+        return hash[abbreviation];
+    }
+    return '';
+},
+
+get_offer_word: function (count) {
+    count = Number(count);
+    var shop_count_last = count % 10;
+    var shop_count_last2 = count % 100;
+    if (shop_count_last2 > 10 && shop_count_last2 < 20) {
+        return 'преложений';
+    }
+    if (shop_count_last == 1) {
+        return 'предложение';
+    }
+    if (shop_count_last < 5) {
+        return 'предложения';
+    }
+    return 'предложений';
+},
+
+get_shop_word: function (count) {
+    count = Number(count);
+    var shop_count_last = count % 10;
+    var shop_count_last2 = count % 100;
+    var shop_count_string = 'магазинах';
+    if (shop_count_last == 1 && shop_count_last2 != 11) {
+        shop_count_string = 'магазине';
+    }
+    return shop_count_string;
+},
+
+get_all_param: function (param_name) {
+    if (!this.data.hasOwnProperty('all_params')) {
+        return [];
+    }
+    if (!this.data.all_params.hasOwnProperty(param_name)) {
+        return [];
+    }
+    return this.data.all_params[param_name];
+},
+
+get_random_id: function () {
+    return Math.floor(Math.random() * 1000000000);
+},
+
+get_random_callback: function (callback) {
+    if (!window.topadvert.widget_callbacks) {
+        window.topadvert.widget_callbacks = {};
+    }
+    var id = this.get_random_id();
+    window.topadvert.widget_callbacks[id] = callback;
+    return 'window.topadvert.widget_callbacks[\'' + id + '\']()';
+},
+
+escapeHTML: function(html) {
+    return html.replace(
+            /\&/g, '&amp;'
+        ).replace(
+            /\</g, '&lt;'
+        ).replace(
+            /\>/g, '&gt;'
+        ).replace(
+            /\"/g, '&#34;'
+        ).replace(
+            /\'/g, '&#39;'
+        );
+},
+
+get_element_open_tag: function (tag_name, attributes, default_styles, styles) {
+    if (attributes == undefined) {
+        attributes = {};
+    }
+    if (styles == undefined) {
+        styles = {};
+    }
+    var result = '<' + tag_name;
+    for (var attr in attributes) {
+        if (attributes.hasOwnProperty(attr)) {
+            result += ' ' + attr + '="' + attributes[attr] + '"';
+        }
+    }
+    result += ' style="';
+    var merged_styles = {};
+    for (var default_style_name in default_styles) {
+        merged_styles[default_style_name] = default_styles[default_style_name];
+    }
+    for (var style_name in styles) {
+        merged_styles[style_name] = styles[style_name];
+    }
+    for (var merged_style_name in merged_styles) {
+        result += merged_style_name + ':' + merged_styles[merged_style_name] + ';';
+    }
+    result += '">';
+    return result;
+},
+
+get_element_close_tag: function (tag_name) {
+    return '</' + tag_name + '>';
+},
+
+get_div_open_tag: function (attributes, styles) {
+    return this.get_element_open_tag(
+        'div',
+        attributes,
+        {
+            'background-color': 'transparent',
+            'backgroundColor': 'transparent',
+            'border': 0,
+            'border-spacing': 0,
+            'borderSpacing': 0,
+            'clear': 'none',
+            'float': 'none',
+            'line-height': 'normal',
+            'lineHeight': 'normal',
+            'margin': 0,
+            'overflow': 'visible',
+            'overflow-wrap': 'normal',
+            'padding': 0,
+            'text-align': 'left',
+            'textAlign': 'left',
+            'text-indent': 0,
+            'textIndent': 0,
+            'text-transform': 'none',
+            'textTransform': 'none',
+            'vertical-align': 'top',
+            'verticalAlign': 'top',
+            'white-space': 'normal',
+            'whiteSpace': 'normal',
+            'word-break': 'normal',
+            'word-wrap': 'normal'
+        },
+        styles
+    );
+},
+
+get_div_close_tag: function () {
+    return this.get_element_close_tag('div');
+},
+
+get_a_open_tag: function (attributes, styles) {
+    return this.get_element_open_tag(
+        'a',
+        attributes,
+        {
+            'background-color': 'transparent',
+            'backgroundColor': 'transparent',
+            'border': 0,
+            'float': 'none',
+            'line-height': 'normal',
+            'lineHeight': 'normal',
+            'margin': 0,
+            'padding': 0,
+            'text-indent': 0,
+            'textIndent': 0,
+            'text-decoration': 'underline',
+            'textDecoration': 'underline',
+            'text-transform': 'none',
+            'textTransform': 'none'
+        },
+        styles
+    );
+},
+
+get_a_close_tag: function () {
+    return this.get_element_close_tag('a');
+},
+
+get_table_open_tag: function (attributes, styles) {
+    var default_attributes = {
+        'border': 0,
+        'cellpadding': 0,
+        'cellspacing': 0
+    };
+    if (!attributes) {
+        attributes = default_attributes;
+    } else {
+        for (var attr in default_attributes) {
+            if (!attributes.hasOwnProperty(attr)) {
+                attributes[attr] = default_attributes[attr];
+            }
+        }
+    }
+    return this.get_element_open_tag(
+        'table',
+        attributes,
+        {
+            'border': 0,
+            'border-width': 0,
+            'borderWidth': 0,
+            'border-collapse': 'collapse',
+            'borderCollapse': 'collapse',
+            'border-spacing': 0,
+            'borderSpacing': 0,
+            'background-attachment': 'scroll',
+            'backgroundAttachment': 'scroll',
+            'background-color': 'transparent',
+            'backgroundColor': 'transparent',
+            'background-image': 'none',
+            'backgroundImage': 'none',
+            'background-position': '0 0',
+            'backgroundPosition': '0 0',
+            'background-repeat': 'repeat',
+            'backgroundRepeat': 'repeat',
+            'margin': 0,
+            'padding': 0,
+            'width': 'auto'
+        },
+        styles
+    );
+},
+
+get_table_close_tag: function () {
+    return this.get_element_close_tag('table');
+},
+
+get_tbody_open_tag: function (attributes, styles) {
+    var default_attributes = {
+        'border': 0,
+        'cellpadding': 0,
+        'cellspacing': 0
+    };
+    if (!attributes) {
+        attributes = default_attributes;
+    } else {
+        for (var attr in default_attributes) {
+            if (!attributes.hasOwnProperty(attr)) {
+                attributes[attr] = default_attributes[attr];
+            }
+        }
+    }
+    return this.get_element_open_tag(
+        'tbody',
+        attributes,
+        {
+            'border': 0,
+            'border-width': 0,
+            'borderWidth': 0,
+            'border-collapse': 'collapse',
+            'borderCollapse': 'collapse',
+            'border-spacing': 0,
+            'borderSpacing': 0,
+            'background-attachment': 'scroll',
+            'backgroundAttachment': 'scroll',
+            'background-color': 'transparent',
+            'backgroundColor': 'transparent',
+            'background-image': 'none',
+            'backgroundImage': 'none',
+            'background-position': '0 0',
+            'backgroundPosition': '0 0',
+            'background-repeat': 'repeat',
+            'backgroundRepeat': 'repeat',
+            'margin': 0,
+            'padding': 0,
+            'width': 'auto'
+        },
+        styles
+    );
+},
+
+get_tbody_close_tag: function () {
+    return this.get_element_close_tag('tbody');
+},
+
+get_tr_open_tag: function (attributes, styles) {
+    return this.get_element_open_tag(
+        'tr',
+        attributes,
+        {
+            'border': 0,
+            'border-width': 0,
+            'borderWidth': 0,
+            'border-collapse': 'collapse',
+            'borderCollapse': 'collapse',
+            'border-spacing': 0,
+            'borderSpacing': 0,
+            'background-color': 'transparent',
+            'backgroundColor': 'transparent',
+            'margin': 0,
+            'padding': 0
+        },
+        styles
+    );
+},
+
+get_tr_close_tag: function () {
+    return this.get_element_close_tag('tr');
+},
+
+get_td_open_tag: function (attributes, styles) {
+    return this.get_element_open_tag(
+        'td',
+        attributes,
+        {
+            'border': 0,
+            'border-width': 0,
+            'borderWidth': 0,
+            'border-collapse': 'collapse',
+            'borderCollapse': 'collapse',
+            'border-spacing': 0,
+            'borderSpacing': 0,
+            'background-color': 'transparent',
+            'backgroundColor': 'transparent',
+            'margin': 0,
+            'padding': 0,
+            'vertical-align': 'middle',
+            'verticalAlign': 'middle',
+            'text-align': 'left',
+            'textAlign': 'left',
+            'text-indent': 0,
+            'textIndent': 0,
+            'text-transform': 'none',
+            'textTransform': 'none',
+            'white-space': 'normal',
+            'whiteSpace': 'normal',
+            'width': 'auto'
+        },
+        styles
+    );
+},
+
+get_td_close_tag: function () {
+    return this.get_element_close_tag('td');
+},
+
+get_img_tag: function (attributes, styles) {
+    var result = this.get_element_open_tag(
+        'img',
+        attributes,
+        {
+            'background-color': 'transparent',
+            'backgroundColor': 'transparent',
+            'border': 0,
+            'margin': 0,
+            'padding': 0
+        },
+        styles
+    );
+    result += this.get_element_close_tag('img');
+    return result;
+},
+
+get_form_open_tag: function (attributes, styles) {
+    return this.get_element_open_tag(
+        'form',
+        attributes,
+        {
+            'margin': 0,
+            'padding': 0
+        },
+        styles
+    );
+},
+
+get_form_close_tag: function () {
+    return this.get_element_close_tag('form');
+},
+
+get_input_tag: function (attributes, styles) {
+    var result = this.get_element_open_tag(
+        'input',
+        attributes,
+        {
+            'border': 0,
+            'height': 'auto',
+            'line-height':'normal',
+            'lineHeight':'normal',
+            'margin':0,
+            'padding': 0,
+            'text-indent': 0,
+            'textIndent': 0
+        },
+        styles
+    );
+    result += this.get_element_close_tag('input');
+    return result;
+},
+
+get_span_open_tag: function (attributes, styles) {
+    return this.get_element_open_tag(
+        'span',
+        attributes,
+        {
+            'background-color': 'transparent',
+            'backgroundColor': 'transparent',
+            'display': 'inline',
+            'float': 'none',
+            'margin': 0,
+            'padding': 0,
+            'text-indent': 0,
+            'textIndent': 0,
+            'text-transform': 'none',
+            'textTransform': 'none'
+        },
+        styles
+    );
+},
+
+get_span_close_tag: function () {
+    return this.get_element_close_tag('span');
+},
+
+get_select_open_tag: function (attributes, styles) {
+    return this.get_element_open_tag(
+        'select',
+        attributes,
+        {
+            'margin': 0,
+            'padding': 0
+        },
+        styles
+    );
+},
+
+get_select_close_tag: function () {
+    return this.get_element_close_tag('select');
+},
+
+get_multiselect_open_tag: function (attributes, styles) {
+    return this.get_element_open_tag(
+        'select multiple',
+        attributes,
+        {
+            'margin': 0,
+            'padding': 0
+        },
+        styles
+    );
+},
+
+get_multiselect_close_tag: function () {
+    return this.get_element_close_tag('select');
+},
+
+get_option_open_tag: function (attributes, styles, selected) {
+    if (selected == undefined) {
+        selected = false;
+    }
+    var tagname = 'option';
+    if (selected) {
+        tagname += ' selected';
+    }
+    return this.get_element_open_tag(
+        tagname,
+        attributes,
+        {
+            'margin': 0,
+            'padding': 0,
+            'text-transform': 'none',
+            'textTransform': 'none'
+        },
+        styles
+    );
+},
+
+get_option_close_tag: function () {
+    return this.get_element_close_tag('option');
+},
+
+get_textarea_open_tag: function (attributes, styles) {
+    return this.get_element_open_tag(
+        'textarea',
+        attributes,
+        {
+            'margin': 0,
+            'padding': 0,
+            'text-indent': 0,
+            'textIndent': 0,
+            'text-transform': 'none',
+            'textTransform': 'none'
+        },
+        styles
+    );
+},
+
+get_textarea_close_tag: function () {
+    return this.get_element_close_tag('textarea');
+},
+
+get_button_tag: function (attributes, styles) {
+    var result = this.get_element_open_tag('button', attributes, {}, styles);
+    result += this.get_element_close_tag('button');
+    return result;
+},
+
+get_label_open_tag: function (attributes, styles) {
+    return this.get_element_open_tag(
+        'label',
+        attributes,
+        {
+            'background-color': 'transparent',
+            'backgroundColor': 'transparent',
+            'margin': 0,
+            'padding': 0,
+            'text-indent': 0,
+            'textIndent': 0,
+            'text-transform': 'none',
+            'textTransform': 'none'
+        },
+        styles
+    );
+},
+
+get_label_close_tag: function () {
+    return this.get_element_close_tag('label');
+},
+
+get_ul_open_tag: function (attributes, styles) {
+    return this.get_element_open_tag(
+        'ul',
+        attributes,
+        {
+            'background-color': 'transparent',
+            'backgroundColor': 'transparent',
+            'margin': 0,
+            'padding': 0
+        },
+        styles
+    );
+},
+
+get_ul_close_tag: function () {
+    return this.get_element_close_tag('ul');
+},
+
+get_li_open_tag: function (attributes, styles) {
+    return this.get_element_open_tag(
+        'li',
+        attributes,
+        {
+            'background-color': 'transparent',
+            'backgroundColor': 'transparent',
+            'margin': 0,
+            'padding': 0,
+            'text-indent': 0,
+            'textIndent': 0,
+            'text-transform': 'none',
+            'textTransform': 'none'
+        },
+        styles
+    );
+},
+
+get_li_close_tag: function () {
+    return this.get_element_close_tag('li');
+},
+
+cut_by_word: function (str, len) {
+    len = Number(len);
+    if (str.length <= len) {
+        return str;
+    }
+    var temp = new String(str);
+    var _last = temp.substring(len - 1, len);
+    temp = temp.substring(0, len - 1);
+    if (_last.match(/\s/)) {
+        return temp;
+    }
+    return temp.replace(/\s+([^\s]+)?$/, '');
+},
+
+in_array: function (val, arr) {
+    for (var i in arr) {
+        if (arr[i] === val) {
+            return 1;
+        }
+    }
+    return 0;
+},
+
+type_of: function (obj) {
+    if (typeof(obj) == 'object') {
+        if (obj.length === Number(obj.length)) {
+            return 'array';
+        }
+        return 'object';
+    }
+    return typeof(obj);
+},
+
+log: function (obj) {
+    if (typeof(console) != 'undefined') {
+        console.log(obj);
+    }
+},
+
+show: function () {
+    // Here go any effects on HTML generated by html()
+},
+
+startCloseTimeout: function (self, callback, timeout) {
+    self.dropCloseTimeout(self);
+    self.timeout_id = setTimeout(callback, timeout);
+},
+
+dropCloseTimeout: function (self) {
+    if (!self.timeout_id) {
+        return;
+    }
+    clearTimeout(self.timeout_id);
+},
+
+getCurrentStyle: function (elem, stylename) {
+    if (!elem) {
+        return '';
+    }
+    if (typeof(elem.currentStyle) != 'undefined') {
+        return elem.currentStyle[stylename];
+    } else if (window.getComputedStyle) {
+        return document.defaultView.getComputedStyle(elem, null).getPropertyValue(stylename);
+    }
+    return '';
+},
+
+setBlockContainerAttrs: function (block, coords) {
+    var that = this;
+    
+    block.style.visibility = 'hidden';
+    block.style.display = 'block';
+    block.style.left = '0px';
+    block.style.top = '0px';
+    
+    var dim = this.getViewPort();
+    var nPos = this.getShiftedCoords(coords);
+    
+    var pos = this.shiftBlock(block, dim, nPos);
+    
+    block.style.left = pos.x + 'px';
+    block.style.top = pos.y + 'px';
+    
+    block.style.visibility = 'visible';
+},
+
+getDefaultCloseTimeout: function () {
+    return this.toInt(this.default_close_timeout);
+},
+
+activateBlock: function (block, coords) {
+    if (!this.adapter.isActual()) {
+        return;
+    }
+    /*
+    var eventType = this.getEventType();
+    if (eventType == 'mouseover' && !this.adapter.getLinkIsMouseOver()) {
+        return;
+    }
+    */
+    if (!this.adapter.isActive()) {
+        this.adapter.activate(true, coords);
+    }
+    this.dropCloseTimeout(this);
+},
+
+closeBlockByTimeout: function (self, block) {
+    var callback = function () {
+        self.adapter.deactivate();
+    };
+    self.startCloseTimeout(self, callback, self.getCloseTimeout());
+},
+
+setBlockEvent: function (block) {
+    if (this.showed) {
+        return;
+    }
+    var that = this;
+    this.add_event(
+        block,
+        'mouseover',
+        function () {
+            that.dropCloseTimeout(that);
+        }
+    );
+    this.add_event(
+        block,
+        'mouseout',
+        this.getCloseByTimeoutCallback(block)
+    );
+    this.showed = true;
+},
+
+redirectURL: function () {
+    return;
+},
+
+openBlock: function (block, coords) {
+    if (this.adapter.isActual() || (this.getEventType() == 'mouseover' && this.adapter.getLinkIsMouseOver())) {
+        this.dropCloseTimeout(this);
+    }
+    this.setBlockContainerAttrs(block, this.getFixedCoords(coords));
+    this.setBlockEvent(block);
+},
+
+getOpenHandlerCallback: function (block) {
+    var that = this;
+    return function (coords) {
+        if (that.redirectURL()) {
+            return;
+        }
+        that.openBlock(block, coords);
+    };
+},
+
+getCloseHandlerCallback: function (block) {
+    var that = this;
+    return function () {
+        that.closeBlock(that, block);
+    };
+},
+
+getActivateBlockCallback: function (block) {
+    var that = this;
+    return function (coords) {
+        that.activateBlock(block, coords);
+    };
+},
+
+getCloseByTimeoutCallback: function (block) {
+    var that = this;
+    return function () {
+        that.closeBlockByTimeout(that, block);
+    };
+},
+
+setMouseoverLinkHandlerSet: function (block) {
+    this.adapter.setOpenHandler(
+        this.getOpenHandlerCallback(block)
+    );
+    this.adapter.setCloseHandler(
+        this.getCloseHandlerCallback(block)
+    );
+    this.adapter.setLinkOnMouseOverHandler(
+        this.getActivateBlockCallback(block)
+    );
+    this.adapter.setLinkOnMouseOutHandler(
+        this.getCloseByTimeoutCallback(block)
+    );
+},
+
+setClickLinkHandlerSet: function (block) {
+    this.adapter.setOpenHandler(
+        this.getOpenHandlerCallback(block)
+    );
+    this.adapter.setCloseHandler(
+        this.getCloseHandlerCallback(block)
+    );
+    this.adapter.setLinkOnClickHandler(
+        this.getActivateBlockCallback(block)
+    );
+    this.adapter.setLinkOnMouseOutHandler(
+        this.getCloseByTimeoutCallback(block)
+    );
+},
+
+closeBlock: function (self, block) {
+    block.style.display = 'none';
+    block.style.visibility = 'visible';
+    block.style.left = '0px';
+    block.style.top = '0px';
+    self.dropCloseTimeout(self);
+    if (self.adapter.getType() == 'event') {
+        self.resetBlockContainer(self, block);
+    }
+},
+
+setBlockHandlers: function (block) {
+    var eventType = this.getEventType();
+    if (eventType == 'click') {
+        this.setClickLinkHandlerSet(block);
+    } else if (eventType == 'mouseover') {
+        this.setMouseoverLinkHandlerSet(block);
+    }
+},
+
+getViewPort: function () {
+    var div = document.createElement('div');
+    div.style.visiblity = 'hidden';
+    div.style.display = 'block';
+    div.style.position = 'absolute';
+    div.style.border = 0;
+    div.style.left = '0px';
+    div.style.top = '0px';
+    div.style.width = '1px';
+    div.style.height = '1px';
+    div.style.margin = 0;
+    div.style.padding = 0;
+    document.body.appendChild(div);
+    var pos = div.getBoundingClientRect();
+    var shiftX = -pos.left;
+    var shiftY = -pos.top;
+    div.style.left = shiftX + 'px';
+    div.style.top = shiftY + 'px';
+    div.style.width = '100%';
+    div.style.height = '100%';
+    var pos2 = div.getBoundingClientRect();
+    var res = {
+        'x': pos2.right - pos2.left,
+        'y': pos2.bottom - pos2.top
+    };
+    document.body.removeChild(div);
+    return res;
+},
+
+getBoundings: function (coords) {
+    var div = document.createElement('div');
+    div.style.visibility = 'hidden';
+    div.style.display = 'block';
+    div.style.position = 'absolute';
+    div.style.border = 0;
+    div.style.margin = 0;
+    div.style.padding = 0;
+    div.style.left = coords.x + 'px';
+    div.style.top = coords.y + 'px';
+    div.style.width = 1 + 'px';
+    div.style.height = 1 + 'px';
+    document.body.appendChild(div);
+    var bnd = div.getBoundingClientRect();
+    var res = {
+        'x': bnd.left,
+        'y': bnd.top
+    };
+    document.body.removeChild(div);
+    return res;
+},
+
+shiftBlock: function (block, dim, coords) {
+    var res = {
+        'x': coords.x,
+        'y': coords.y
+    };
+    
+    if (!dim) {
+        return res;
+    }
+    
+    var bnd = this.getBoundings(res);
+    
+    var block_pos = block.getBoundingClientRect();
+    if (!block_pos) {
+        return;
+    }
+    
+    var block_top = this.toInt(block_pos.top);
+    var block_right = this.toInt(block_pos.right);
+    var block_bottom = this.toInt(block_pos.bottom);
+    var block_left = this.toInt(block_pos.left);
+    
+    var styles_left = res.x;
+    var styles_width = block_right - block_left;
+    var styles_top = res.y;
+    var styles_height = block_bottom - block_top;
+    
+    if ((bnd.x + styles_width) > dim.x) {
+        if (dim.x > styles_width) {
+            res.x -= styles_width;
+        } else {
+            res.x = 0;
+        }
+    }
+    if ((bnd.y + styles_height) > dim.y) {
+        if (dim.y > styles_height) {
+            res.y -= styles_height;
+        } else {
+            res.y = 0;
+        }
+    }
+    
+    return res;
+},
+
+getScreenCoordFix: function () {
+    var div = document.createElement('div');
+    div.style.visibility = 'hidden';
+    div.style.position = 'absolute';
+    div.style.left = '0px';
+    div.style.top = '0px';
+    div.style.display = 'block';
+    document.body.appendChild(div);
+    var pageScroll = this.getPageScroll();
+    var x = pageScroll.x + div.getBoundingClientRect().left;
+    var y = pageScroll.y + div.getBoundingClientRect().top;
+    document.body.removeChild(div);
+    return {
+        'x': this.toInt(x),
+        'y': this.toInt(y)
+    };
+},
+
+getFixedCoords: function (coords) {
+    var shift = this.getScreenCoordFix();
+    var x = coords.x - shift.x;
+    var y = coords.y - shift.y;
+    return {
+        'x': x,
+        'y': y
+    };
+},
+
+getPageScroll: function () {
+    var x = window.pageXOffset || Math.max(document.documentElement.scrollLeft, document.body.scrollLeft);
+    var y = window.pageYOffset || Math.max(document.documentElement.scrollTop, document.body.scrollTop);
+    return {
+        'x': this.toFloat(x),
+        'y': this.toFloat(y)
+    };
+},
+
+getBlockPosition: function (block) {
+    var coords = {
+        'x': 0,
+        'y': 0
+    };
+
+    if (!block) {
+        return coords;
+    }
+    
+    var box = block.getBoundingClientRect();
+    var scroll = this.getPageScroll();
+    
+    coords.x = this.toFloat(box.left) + scroll.x;
+    coords.y  = this.toFloat(box.top) + scroll.y;
+    
+    return coords;
+},
+
+isNonZeroValue: function (value) {
+    if (!value) {
+        return false;
+    }
+    var num = this.toInt(value);
+    if (num && !isNaN(num)) {
+        return true;
+    }
+    return false;
+},
+
+toInt: function (value) {
+    var result = parseInt(value);
+    if (isNaN(result)) {
+        return 0;
+    }
+    return result;
+},
+
+toFloat: function (value) {
+    var result = parseFloat(value);
+    if (isNaN(result)) {
+        return 0;
+    }
+    return result;
+}
+});
+;this._widgetClasses['WhereToBuyBase.BlockBase'] = this._widgetClasses['WhereToBuyBase'].extend({
+getDataInterface: function () {
+    var that = this;
+    return (function () {
+        var dataInterface = {
+            'getCurrency': function (itemData) {
+                return itemData.currency;
+            },
+            'getFavicon': function (itemData) {
+                return itemData.adv_favicon;
+            },
+            'getPrice': function (itemData) {
+                return that.substituteVariables(itemData, that.settings.price.format);
+            },
+            'getShopName': function (itemData) {
+                return that.substituteVariables(itemData, that.settings.shop.format);
+            },
+            'getTitle': function (itemData) {
+                return that.substituteVariables(itemData, that.settings.header.format);
+            },
+            'getUrl': function (itemData) {
+                return itemData.url;
+            }
+        };
+        dataInterface["getItemInterface"] = function (itemData) {
+            return {
+                'getCurrency': function () {
+                    return dataInterface.getCurrency(itemData);
+                },
+                'getFavicon': function () {
+                    return dataInterface.getFavicon(itemData);
+                },
+                'getPrice': function () {
+                    return dataInterface.getPrice(itemData);
+                },
+                'getShopName': function () {
+                    return dataInterface.getShopName(itemData);
+                },
+                'getTitle': function () {
+                    return dataInterface.getTitle(itemData);
+                },
+                'getUrl': function () {
+                    return dataInterface.getUrl(itemData);
+                }
+            };
+        };
+        return dataInterface;
+    })();
+},
+
+getEventCoords: function () {
+    return (
+        (this.getEventType() == 'click') ?
+        this.adapter.getLinkOnClickCoords() :
+        this.adapter.getLinkMouseOverCoords()
+    );
+},
+
+_createElement: function (elementName, attributes, styles) {
+    var defaultAttributes = {};
+    var defaultStyles = {
+        "backgroundColor": "transparent",
+        "border": 0,
+        "borderCollapse": "collapse",
+        "borderSpacing": 0,
+        "fontSize": 0,
+        "lineHeight": 0,
+        "margin": 0,
+        "outline": 0,
+        "overflow-wrap": "normal",
+        "padding": 0,
+        "textAlign": "left",
+        "textIndent": 0,
+        "visibility": "visible",
+        "word-break": "normal",
+        "word-wrap": "normal"
+    };
+    var el = document.createElement(elementName);
+    el = this._applyAttributes(el, defaultAttributes);
+    el = this._applyAttributes(el, attributes);
+    el = this._applyStyles(el, defaultStyles);
+    el = this._applyStyles(el, styles);
+    return el;
+},
+
+_applyAttributes: function (el, attributes) {
+    if (el && attributes) {
+        for (var name in attributes) {
+            el[name] = attributes[name];
+        }
+    }
+    return el;
+},
+
+_applyStyles: function (el, styles) {
+    if (el && styles) {
+        for (var name in styles) {
+            el.style[name] = styles[name];
+        }
+    }
+    return el;
+},
+
+overrideProperties: function (defaultPropertyList, newPropertyList) {
+    var result = {};
+    for (var name in defaultPropertyList) {
+        result[name] = defaultPropertyList[name];
+    }
+    for (var name in newPropertyList) {
+        result[name] = newPropertyList[name];
+    }
+    return result;
+},
+
+createDivElement: function (attributes, styles) {
+    if (!attributes) {
+        attributes = {};
+    }
+    if (!styles) {
+        styles = {};
+    }
+    var defaultAttributes = {};
+    var defaultStyles = {
+        "display": "block",
+        "float": "none"
+    };
+    var div = this._createElement(
+        "div",
+        this.overrideProperties(defaultAttributes, attributes),
+        this.overrideProperties(defaultStyles, styles)
+    );
+    return div;
+},
+
+createTableElement: function (attributes, styles) {
+    if (!attributes) {
+        attributes = {
+            "cellpadding": 0,
+            "cellspacing": 0
+        };
+    }
+    if (!styles) {
+        styles = {
+            "display": "table",
+            "float": "none"
+        };
+    }
+    var defaultAttributes = {};
+    var defaultStyles = {};
+    var table = this._createElement(
+        "table",
+        this.overrideProperties(defaultAttributes, attributes),
+        this.overrideProperties(defaultStyles, styles)
+    );
+    return table;
+},
+
+createTBodyElement: function (attributes, styles) {
+    if (!attributes) {
+        attributes = {};
+    }
+    if (!styles) {
+        styles = {
+            "display": "table-row-group"
+        };
+    }
+    var defaultAttributes = {};
+    var defaultStyles = {};
+    var tbody = this._createElement(
+        "tbody",
+        this.overrideProperties(defaultAttributes, attributes),
+        this.overrideProperties(defaultStyles, styles)
+    );
+    return tbody;
+},
+
+createTrElement: function (attributes, styles) {
+    if (!attributes) {
+        attributes = {};
+    }
+    if (!styles) {
+        styles = {
+            "display": "table-row"
+        };
+    }
+    var defaultAttributes = {};
+    var defaultStyles = {};
+    var tr = this._createElement(
+        "tr",
+        this.overrideProperties(defaultAttributes, attributes),
+        this.overrideProperties(defaultStyles, styles)
+    );
+    return tr;
+},
+
+createTdElement: function (attributes, styles) {
+    if (!attributes) {
+        attributes = {};
+    }
+    if (!styles) {
+        styles = {
+            "display": "table-cell"
+        };
+    }
+    var defaultAttributes = {};
+    var defaultStyles = {
+        "verticalAlign": "middle"
+    };
+    var td = this._createElement(
+        "td",
+        this.overrideProperties(defaultAttributes, attributes),
+        this.overrideProperties(defaultStyles, styles)
+    );
+    return td;
+},
+
+createAElement: function (attributes, styles) {
+    if (!attributes) {
+        attributes = {};
+    }
+    if (!styles) {
+        styles = {};
+    }
+    var defaultAttributes = {};
+    var defaultStyles = {
+        "float": "none",
+        "textDecoration": "underline"
+    };
+    var a = this._createElement(
+        "a",
+        this.overrideProperties(defaultAttributes, attributes),
+        this.overrideProperties(defaultStyles, styles)
+    );
+    return a;
+},
+
+createImgElement: function (attributes, styles) {
+    if (!attributes) {
+        attributes = {};
+    }
+    if (!styles) {
+        styles = {
+            "float": "none"
+        };
+    }
+    var defaultAttributes = {};
+    var defaultStyles = {};
+    var img = this._createElement(
+        "img",
+        this.overrideProperties(defaultAttributes, attributes),
+        this.overrideProperties(defaultStyles, styles)
+    );
+    return img;
+},
+
+/*
+ *
+ */
+
+removeTags: function (str) {
+    var result = str.replace(/<[^>]*>/g, '');
+    return result;
+},
+
+getStyle: function (x, styleProp) {
+    var y = null;
+	if (x.currentStyle) {
+		y = x.currentStyle[styleProp];
+    } else if (window.getComputedStyle) {
+		y = document.defaultView.getComputedStyle(x,null).getPropertyValue(styleProp);
+    }
+	return y;
+},
+
+cropString: function (str, length, suffix) {
+    var len = this.toInt(length);
+    if (!len) {
+        return str;
+    }
+    if (str.length > len + suffix.length) {
+        var result = str.substring(0, len);
+        while (result.length && /[^A-Za-zА-Яа-я0-9]$/.test(result)) {
+            result = result.substring(0, result.length - 1);
+        }
+        result += suffix;
+        return result;
+    }
+    return str;
+},
+
+substituteVariables: function (itemData, format) {
+    if (!itemData || !format) {
+        return '';
+    }
+/*
+    %SHOP%  -- shop name
+    %TITLE% -- item name
+    %PRICE% -- item price
+*/
+    var result = format;
+    result = result.replace(/%TITLE%/i, this.getItemTitleString(itemData));
+    result = result.replace(/%SHOP%/i, this.getItemShopNameString(itemData));
+    result = result.replace(/%PRICE%/i, this.getItemPriceString(itemData));
+    return result;
+},
+
+getItemTitleString: function (itemData) {
+    return this.escapeHTML(itemData.title);
+},
+
+getItemShopNameString: function (itemData) {
+    return this.escapeHTML(itemData.shop_name);
+},
+
+getItemPriceString: function (itemData) {
+    return itemData.cost + '&nbsp;' + this.get_currency_string(itemData.currency);
+},
+
+getDefaultOfferFormat: function () {
+    return "%SHOP% &ndash;&nbsp;%PRICE%";
+},
+
+getWrappedOfferText: function (item, format) {
+    if (!item) {
+        return "";
+    }
+    if (!format) {
+        format = this.getDefaultOfferFormat();
+    }
+    var result = this.substituteVariables(item, format);
+    return result;
+},
+
+getWrappedShopName: function (item) {
+    if (!item) {
+        return '';
+    }
+    if (!this.settings.shop_name.format) {
+        return this.getShopName(item);
+    }
+    return this.substituteVariables(
+        item,
+        this.settings.shop_name.format
+    );
+},
+
+getWrappedPrice: function (item) {
+    if (!item) {
+        return '';
+    }
+    if (!this.settings.price.format) {
+        return this.getPriceString(item);
+    }
+    return this.substituteVariables(
+        item,
+        this.settings.price.format
+    );
+},
+
+gag: function () {
+    var result = '';
+    result += this.get_div_open_tag(
+        {},
+        {
+            'display': 'block',
+            'width': '1px',
+            'height': '1px',
+            'visibility': 'hidden'
+        }
+    );
+    result += this.get_div_close_tag();
+    return result;
+},
+
+appendToDOM: function (block) {
+    if (this.adapter.getLoadEvent() == 'mouse_action') {
+        document.body.insertBefore(block, document.body.firstChild);
+        return;
+    }
+    if (this.adapter.getLoadEvent() == 'page_load') {
+        var div_id = this.adapter.getDivId();
+        if (div_id != null) {
+            if (block.id != null && block.id.length && block.id == div_id) {
+                return;
+            }
+            var waitCallback = function () {
+                var div = document.getElementById(div_id);
+                if (div == null) {
+                    setTimeout(waitCallback, 100);
+                } else {
+                    div.innerHTML = '';
+                    div.appendChild(block);
+                }
+            };
+            waitCallback();
+        } else {
+            var codeElement = this.adapter.getCodeElement();
+            codeElement.parentNode.insertBefore(block, codeElement);
+        }
+        return;
+    }
+}
+});
+;this._widgetClasses['WhereToBuyBase.BlockBase.StandartBlock'] = this._widgetClasses['WhereToBuyBase.BlockBase'].extend({
+// static extended block:
+getFullShopList: function (block) {
+    var result = '';
+    result += this.getHeaderBlock();
+    result += this.getShopList(
+        this.getExtendedOfferCount()
+    )
+    result += this.getFooterBlock(
+        this.getFooterContent(
+            this.getCloseHandler(block),
+            this.getLessOffersLinkText()
+        )
+    );
+    return this.getMainBlock('', result, block);
+},
+
+getLessOffersLinkText: function () {
+    return this.settings.footer.roll_up_text;
+},
+
+getUtmParamString: function (click_params) {
+    var params = "";
+    if (!this.isNonZeroValue(this.settings.testing.enabled)) {
+        return "";
+    }
+    params += "&utm_content=";
+    params += "topadvert";
+    params += "_1";  // version
+    params += "_variant-name_2";
+    params += "_block-name_where-to-buy";
+    params += "_click-id_" + click_params.click_id;
+    params += "_pin_%25pin%25";
+    return params;
+},
+
+getPopupBlockCallback: function (block) {
+    if (!this.extended_list_block) {
+        this.extended_list_block = document.createElement('div');
+        this.extended_list_block.style.display = 'block';
+        this.extended_list_block.style.margin = 0;
+        this.extended_list_block.style.padding = 0;
+        this.extended_list_block.style.position = 'absolute';
+        this.extended_list_block.style.visibility = 'hidden';
+        this.extended_list_block.style['z-index'] = 999998;
+        this.extended_list_block.style['zIndex'] = 999998;
+        this.extended_list_block.style['font-size'] = 0;
+        this.extended_list_block.style['fontSize'] = 0;
+        this.extended_list_block.style['line-height'] = 0;
+        this.extended_list_block.style['lineHeight'] = 0;
+        this.extended_list_block.style.top = 0;
+        this.extended_list_block.style.left = 0;
+        
+        var content_block = this.getFullShopList(this.extended_list_block);
+        this.extended_list_block.appendChild(content_block);
+        document.body.appendChild(this.extended_list_block);
+    }
+    var that = this;
+    return function () {
+        that.extended_list_block.style.display = 'block';
+        that.extended_list_block.style.visibility = 'hidden';
+        that.extended_list_block.style.left = '0px';
+        that.extended_list_block.style.top = '0px';
+        
+        var coords = that.getBlockPosition(block);
+        var shift = that.getBlockPosition(that.extended_list_block);
+        var x = coords.x - shift.x + that.toInt(block.clientLeft);
+        var y = coords.y - shift.y + that.toInt(block.clientTop);
+        
+        var indentX = that.toInt(that.settings.close_icon.width) + 2 * that.toInt(that.settings.close_icon.indent);
+        var indentY = that.toInt(that.settings.close_icon.height) + 2 * that.toInt(that.settings.close_icon.indent);
+        x = x - indentX - that.toInt(that.settings.popup_block.border_width);
+        y = y - indentY - that.toInt(that.settings.popup_block.border_width);
+        
+        that.extended_list_block.style.left = x + 'px';
+        that.extended_list_block.style.top = y + 'px';
+        that.extended_list_block.style.width = that.extended_list_block.offsetWidth + 'px';
+        var onmouseover_callback = function () {
+            return function () {
+                that.dropCloseTimeout(that);
+            };
+        };
+        that.add_event(that.extended_list_block, 'mouseover', onmouseover_callback());
+        var onmouseout_callback = function (block) {
+            return function () {
+                var callback = function () {
+                    that.closeBlock(that, block);
+                };
+                that.startCloseTimeout(that, callback, that.getCloseTimeout());
+            };
+        };
+        that.add_event(that.extended_list_block, 'mouseout', onmouseout_callback(that.extended_list_block));
+        that.extended_list_block.style.visibility = 'visible';
+    };
+},
+
+getServiceIcon: function () {
+    var result = '';
+    var attrs = {
+        'href': this.settings.service_icon.url,
+        'target': '_blank'
+    };
+    if (this.settings.service_icon.title) {
+        attrs['title'] = this.escapeHTML(this.settings.service_icon.title);
+    }
+    result += this.get_a_open_tag(
+        attrs,
+        {
+            'background': 'transparent',
+            'outline': 0,
+            'text-decoration': 'none',
+            'textDecoration': 'none',
+            'width': this.settings.service_icon.width
+        }
+    );
+        result += this.get_img_tag(
+            {
+                'src': this.utils.get_image_url(this.settings.service_icon.src)
+            },
+            {
+                'border': 0,
+                'display': 'block',
+                'height': this.settings.service_icon.height,
+                'outline': 0,
+                'width': this.settings.service_icon.width
+            }
+        );
+    result += this.get_a_close_tag();
+    return result;
+},
+
+getCloseIcon: function (handler) {
+    if (!handler) {
+        return '';
+    }
+    var result = '';
+    var attrs = {
+        'href': 'javascript: void(0)',
+        'onclick': this.get_random_callback(handler) + ';'
+    };
+    if (this.settings.close_icon.title) {
+        attrs['title'] = this.escapeHTML(this.settings.close_icon.title);
+    }
+    result += this.get_a_open_tag(
+        attrs,
+        {
+            'display': 'block',
+            'font-size': 0,
+            'fontSize': 0,
+            'line-height': 0,
+            'lineHeight': 0,
+            'outline': 0,
+            'text-decoration': 'none',
+            'textDecoration': 'none',
+            'width': this.settings.close_icon.width
+        }
+    );
+        result += this.get_img_tag(
+            {
+                'src': this.utils.get_image_url(this.settings.close_icon.src)
+            },
+            {
+                'display': 'block',
+                'height': this.settings.close_icon.height,
+                'outline': 0,
+                'width': this.settings.close_icon.width
+            }
+        );
+    result += this.get_a_close_tag();
+    return result;
+},
+
+getReplaceCallback: function () {
+    var that = this;
+    return function () {
+        that.showFullListBlock();
+    };
+},
+
+showShortBlockCallback: function () {
+    var that = this;
+    return function () {
+        that.showShortListBlock();
+    };
+},
+
+getMoreOffersLinkText: function () {
+    var count = this.getExtendedOfferCount() - this.getShortOfferCount();
+    if (!count) {
+        return '';
+    }
+    return 'Еще ' + count + '&nbsp;' + this.get_offer_word(count);
+},
+
+getFooterContent: function (handler, text) {
+    if (!text) {
+        return '';
+    }
+    var result = '';
+    result += this.get_div_open_tag(
+        {},
+        {
+            'display': 'block',
+            'font-size': 0,
+            'fontSize': 0,
+            'line-height': 0,
+            'lineHeight': 0,
+            'margin-top': this.settings.general.outline,
+            'marginTop': this.settings.general.outline,
+            'outline': 0,
+            'text-align': this.settings.footer.text_align,
+            'textAlign': this.settings.footer.text_align
+        }
+    );
+        result += this.get_table_open_tag(
+            {},
+            {
+                'width': '100%'
+            }
+        );
+            result += this.get_tbody_open_tag();
+            result += this.get_tr_open_tag();
+                result += this.get_td_open_tag();
+                    result += this.get_table_open_tag();
+                        result += this.get_tbody_open_tag();
+                        result += this.get_tr_open_tag();
+                            result += this.get_td_open_tag();
+                                var container_id = this.get_random_id();
+                                var container_styles = {
+                                    'display': 'block',
+                                    'font-size': 0,
+                                    'fontSize': 0,
+                                    'line-height': 0,
+                                    'lineHeight': 0,
+                                    'outline': 0
+                                };
+                                if (this.toInt(this.settings.footer.underline)) {
+                                    container_styles['border-bottom-width'] = this.settings.footer.underline_width;
+                                    container_styles['borderBottomWidth'] = this.settings.footer.underline_width;
+                                    container_styles['border-bottom-style'] = this.settings.footer.underline_style;
+                                    container_styles['borderBottomStyle'] = this.settings.footer.underline_style;
+                                    container_styles['border-color'] = this.settings.footer.color;
+                                    container_styles['borderColor'] = this.settings.footer.color;
+                                    container_styles['margin-left'] = this.settings.general.indent;
+                                    container_styles['marginLeft'] = this.settings.general.indent;
+                                    container_styles['margin-right'] = this.settings.general.indent;
+                                    container_styles['marginRight'] = this.settings.general.indent;
+                                    container_styles['padding-bottom'] = this.settings.footer.underline_indent;
+                                    container_styles['paddingBottom'] = this.settings.footer.underline_indent;
+                                }
+                                result += this.get_div_open_tag(
+                                    {
+                                        'id': container_id
+                                    },
+                                    container_styles
+                                );
+                                    var link_id = this.get_random_id();
+                                    var color = this.settings.footer.color;
+                                    var onmouseover_color = this.settings.footer.onmouseover_color;
+                                    var onmouseover_callback = this.get_random_callback(
+                                        function () {
+                                            var link = document.getElementById(link_id);
+                                            if (link) {
+                                                link.style['color'] = onmouseover_color;
+                                            }
+                                            var container = document.getElementById(container_id);
+                                            if (container) {
+                                                container.style['border-color'] = onmouseover_color;
+                                                container.style['borderColor'] = onmouseover_color;
+                                            }
+                                        }
+                                    );
+                                    var onmouseout_callback = this.get_random_callback(
+                                        function () {
+                                            var link = document.getElementById(link_id);
+                                            if (link) {
+                                                link.style['color'] = color;
+                                            }
+                                            var container = document.getElementById(container_id);
+                                            if (container) {
+                                                container.style['border-color'] = color;
+                                                container.style['borderColor'] = color;
+                                            }
+                                        }
+                                    );
+                                    result += this.get_a_open_tag(
+                                        {
+                                            'id': link_id,
+                                            'href': 'javascript: void(0)',
+                                            'onclick': this.get_random_callback(handler) + ';',
+                                            'onmouseover': onmouseover_callback + ';',
+                                            'onmouseout': onmouseout_callback + ';'
+                                        },
+                                        {
+                                            'color': this.settings.footer.color,
+                                            'display': 'block',
+                                            'font-family': this.cleanSettingsValue(this.settings.footer.font_family),
+                                            'fontFamily': this.cleanSettingsValue(this.settings.footer.font_family),
+                                            'font-size': this.settings.footer.font_size,
+                                            'fontSize': this.settings.footer.font_size,
+                                            'font-style': this.settings.footer.font_style,
+                                            'fontStyle': this.settings.footer.font_style,
+                                            'font-weight': (this.toInt(this.settings.footer.bold) ? 'bold' : 'normal'),
+                                            'fontWeight': (this.toInt(this.settings.footer.bold) ? 'bold' : 'normal'),
+                                            'line-height': this.settings.footer.font_size,
+                                            'lineHeight': this.settings.footer.font_size,
+                                            'outline': 0,
+                                            'text-decoration': 'none',
+                                            'textDecoration': 'none'
+                                        }
+                                    );
+                                        result += text;
+                                    result += this.get_a_close_tag();
+                                result += this.get_div_close_tag();
+                            result += this.get_td_close_tag();
+                            result += this.get_tr_close_tag();
+                        result += this.get_tbody_close_tag();
+                    result += this.get_table_close_tag();
+                result += this.get_td_close_tag();
+                
+                if (this.toInt(this.settings.service_icon.enabled)) {
+                    result += this.get_td_open_tag(
+                        {},
+                        {
+                            'width': this.settings.service_icon.width
+                        }
+                    );
+                        result += this.getServiceIcon();
+                    result += this.get_td_close_tag();
+                }
+                
+                // right indent
+                result += this.get_td_open_tag(
+                    {},
+                    {
+                        'width': this.settings.general.indent
+                    }
+                );
+                result += this.get_td_close_tag();
+            result += this.get_tr_close_tag();
+            result += this.get_tbody_close_tag();
+        result += this.get_table_close_tag();
+    result += this.get_div_close_tag();
+    return result;
+},
+
+getFooterBlock: function (content) {
+    if (!content) {
+        return '';
+    }
+    var result = '';
+    result += this.get_div_open_tag(
+        {},
+        {
+            'display': 'block',
+            'font-size': 0,
+            'fontSize': 0,
+            'line-height': 0,
+            'lineHeight': 0,
+            'outline': 0
+        }
+    );
+        result += content;
+    result += this.get_div_close_tag();
+    return result;
+},
+
+getShortOfferCount: function () {
+    var count = this.toInt(this.settings.offer_block.short_offer_list_length);
+    var len_dev = this.toInt(this.settings.offer_block.short_offer_list_length_deviation);
+    var max_length = this.getExtendedOfferCount();
+    if (count > max_length) {
+        count = max_length;
+    } else if (max_length <= (count + len_dev)) {
+        count = max_length;
+    }
+    return count;
+},
+
+getExtendedOfferCount: function () {
+    var count = this.toInt(this.settings.offer_block.extended_offer_list_length);
+    if (count > this.data.advs.length) {
+        count = this.data.advs.length;
+    }
+    return count;
+},
+
+getCloseHandler: function (block) {
+    var that = this;
+    return function () {
+        if (!block) {
+            return;
+        }
+        that.closeBlock(that, block);
+        if (that.adapter.deactivate) {
+            that.adapter.deactivate();
+        }
+    };
+},
+
+removeTags: function (text) {
+    if (!text) {
+        return '';
+    }
+    var result = '';
+    var regexp = new RegExp('<[^\>]*>', 'g');
+    try {
+        result = text.replace(regexp, '');
+    } catch(err) {
+        result = '';
+    }
+    return result;
+},
+
+getTitleText: function () {
+    if (this.toInt(this.settings.header.use_param_title) && this.params.title) {
+        return this.removeTags(this.params.title);
+    }
+    return this.settings.header.text;
+},
+
+getHeaderBlock: function () {
+    if (!this.toInt(this.settings.header.enabled)) {
+        return '';
+    }
+    var result = '';
+    result += this.get_div_open_tag(
+        {},
+        {
+            'color': this.settings.header.color,
+            'display': 'block',
+            'font-family': this.cleanSettingsValue(this.settings.header.font_family),
+            'fontFamily': this.cleanSettingsValue(this.settings.header.font_family),
+            'font-size': this.settings.header.font_size,
+            'fontSize': this.settings.header.font_size,
+            'font-style': this.settings.header.font_style,
+            'fontStyle': this.settings.header.font_style,
+            'font-weight': (this.toInt(this.settings.header.bold) ? 'bold' : 'normal'),
+            'fontWeight': (this.toInt(this.settings.header.bold) ? 'bold' : 'normal'),
+            'line-height': this.settings.header.font_size,
+            'lineHeight': this.settings.header.font_size,
+            'margin-left': this.settings.general.indent,
+            'marginLeft': this.settings.general.indent,
+            'margin-right': this.settings.general.indent,
+            'marginRight': this.settings.general.indent,
+            'margin-bottom': this.settings.general.outline,
+            'marginBottom': this.settings.general.outline,
+            'outline': 0,
+            'text-align': this.settings.header.text_align,
+            'textAlign': this.settings.header.text_align
+        }
+    );
+        result += this.getTitleText();
+    result += this.get_div_close_tag();
+    return result;
+},
+
+getCloseIconBlock: function (block) {
+    var result = '';
+    result += this.get_table_open_tag();
+        result += this.get_tbody_open_tag();
+        result += this.get_tr_open_tag();
+        result += this.get_td_open_tag(
+            {},
+            {
+                'padding': this.settings.close_icon.indent
+            }
+        );
+            result += this.getCloseIcon(
+                this.getCloseHandler(block)
+            );
+        result += this.get_td_close_tag();
+        result += this.get_tr_close_tag();
+        result += this.get_tbody_close_tag();
+    result += this.get_table_close_tag();
+    return result;
+},
+
+getShortBlock: function (content, block) {
+    return this.getMainBlock(this.getShortListBlockId(), content, block);
+},
+
+getFullBlock: function (content, block) {
+    return this.getMainBlock(this.getFullListBlockId(), content, block);
+},
+
+getWidthOfOuterContainer: function () {
+    var res = this.toInt(this.settings.offer_block.width)
+        + 2 * (this.toInt(this.settings.close_icon.width) + 2 * (this.toInt(this.settings.close_icon.indent)))
+        + 2 * (this.toInt(this.settings.popup_block.border_width));
+    return res;
+},
+
+getMainBlock: function (container_id, content, block) {
+    var div = document.createElement('div');
+    if (container_id) {
+        div.id = container_id;
+    }
+    div.style['background-color'] = this.settings.general.background_color;
+    div.style['backgroundColor'] = this.settings.general.background_color;
+    div.style['border-width'] = this.settings.popup_block.border_width;
+    div.style['borderWidth'] = this.settings.popup_block.border_width;
+    div.style['border-style'] = this.settings.popup_block.border_style;
+    div.style['borderStyle'] = this.settings.popup_block.border_style;
+    div.style['border-color'] = this.settings.popup_block.border_color;
+    div.style['borderColor'] = this.settings.popup_block.border_color;
+    div.style['border-radius'] = this.settings.popup_block.border_radius;
+    div.style['borderRadius'] = this.settings.popup_block.border_radius;
+    div.style['font-size'] = 0;
+    div.style['fontSize'] = 0;
+    div.style['line-height'] = 0;
+    div.style['lineHeight'] = 0;
+    div.style['margin'] = 0;
+    div.style['outline'] = 0;
+    div.style['padding'] = 0;
+
+    var outer_div = document.createElement('div');
+    outer_div.style['border'] = 0;
+    outer_div.style['display'] = 'block';
+    outer_div.style['margin'] = 0;
+    outer_div.style['outline'] = 0;
+    outer_div.style['padding'] = 0;
+    
+    outer_div.style['width'] = this.getWidthOfOuterContainer() + 'px';
+    // for pixels only:
+    /*
+    var offerListBlock = document.getElementById(this.innerBlockID);
+    if (offerListBlock) {
+        outer_div.style['width'] = // this.toInt(offerListBlock.offsetWidth)
+            this.toInt(this.settings.general.width)
+            + 2 * (this.toInt(this.settings.close_icon.width) + 2 * (this.toInt(this.settings.close_icon.indent)))
+            + 2 * (this.toInt(this.settings.popup_block.border_width))
+            + 'px';
+    }
+    */
+    
+    var content_block = '';
+    content_block += this.get_div_open_tag();
+    content_block += this.get_table_open_tag();
+        content_block += this.get_tbody_open_tag();
+        content_block += this.get_tr_open_tag();
+            content_block += this.get_td_open_tag();
+            content_block += this.get_td_close_tag();
+            content_block += this.get_td_open_tag();
+            content_block += this.get_td_close_tag();
+            content_block += this.get_td_open_tag();
+                content_block += this.getCloseIconBlock(block);
+            content_block += this.get_td_close_tag();
+        content_block += this.get_tr_close_tag();
+        content_block += this.get_tr_open_tag();
+            content_block += this.get_td_open_tag();
+            content_block += this.get_td_close_tag();
+            content_block += this.get_td_open_tag(
+                {},
+                {
+                    'width': this.settings.offer_block.width
+                }
+            );
+                content_block += content;
+            content_block += this.get_td_close_tag();
+            content_block += this.get_td_open_tag();
+            content_block += this.get_td_close_tag();
+        content_block += this.get_tr_close_tag();
+        content_block += this.get_tr_open_tag();
+            content_block += this.get_td_open_tag();
+                content_block += this.get_div_open_tag(
+                    {},
+                    {
+                        'visibility': 'hidden'
+                    }
+                );
+                    content_block += this.getCloseIconBlock(block);
+                content_block += this.get_div_close_tag();
+            content_block += this.get_td_close_tag();
+            content_block += this.get_td_open_tag();
+            content_block += this.get_td_close_tag();
+            content_block += this.get_td_open_tag();
+            content_block += this.get_td_close_tag();
+        content_block += this.get_tr_close_tag();
+        content_block += this.get_tbody_close_tag();
+    content_block += this.get_table_close_tag();
+    content_block += this.get_div_close_tag();
+
+    div.innerHTML = content_block;
+    outer_div.appendChild(div);
+    return outer_div;
+},
+
+getShiftedCoords: function (coords) {
+    if (this.toInt(this.settings.popup_block.xDiv)) {
+        coords.x += this.toInt(this.settings.popup_block.xDiv);
+    }
+    if (this.toInt(this.settings.popup_block.yDiv)) {
+        coords.y += this.toInt(this.settings.popup_block.yDiv);
+    }
+    return coords;
+},
+
+getCloseTimeout: function () {
+    var timeout = this.toInt(this.settings.popup_block.close_timeout);
+    if (!timeout) {
+        timeout = this.getDefaultCloseTimeout();
+    }
+    return (1000 * timeout);
+},
+
+resetBlockContainer: function (self, block) {
+    self.showShortListBlock();
+},
+
+getEventType: function () {
+    if (!this.settings.general) {
+        return;
+    }
+    if (!this.settings.general.activation_event_type) {
+        return;
+    }
+    return this.settings.general.activation_event_type;
+},
+
+appendToDOM: function (block) {
+    if (this.adapter.getLoadEvent() == 'mouse_action') {
+        document.body.insertBefore(block, document.body.firstChild);
+        return;
+    }
+    if (this.adapter.getLoadEvent() == 'page_load') {
+        if (block.id && this.adapter.getDivId() && block.id == this.adapter.getDivId()) {
+            return;
+        }
+        var textarea = this.adapter.getCodeElement();
+        textarea.parentNode.insertBefore(block, textarea);
+        return;
+    }
+},
+
+getDOMBlock: function (block_id, content) {
+    var div = document.createElement('div');
+    if (block_id) {
+        div.id = block_id;
+    }
+    if (this.settings.general.background_color) {
+        div.style['background-color'] = this.settings.general.background_color;
+        div.style['backgroundColor'] = this.settings.general.background_color;
+    }
+    div.style['display'] = 'block';
+    div.style['font-size'] = 0;
+    div.style['fontSize'] = 0;
+    div.style['line-height'] = 0;
+    div.style['lineHeight'] = 0;
+    div.style['margin'] = 0;
+    div.style['outline'] = 0;
+    div.style['padding'] = 0;
+    div.style['width'] = this.settings.offer_block.width;
+    div.innerHTML = content;
+    return div;
+},
+
+getShortStaticBlock: function (block) {
+    this.innerBlockID = this.get_random_id();
+    if (!this.getShortOfferCount()) {
+        if (!this.isNonZeroValue(this.settings.static_block.show_not_found_sticker)) {
+            return '';
+        }
+        return this.getDOMBlock(
+            this.innerBlockID,
+            this.getNothingFoundBlock()
+        );
+    }
+    var result = '';
+    result += this.getHeaderBlock();
+    result += this.getShopList(
+        this.getShortOfferCount()
+    );
+    result += this.getFooterBlock(
+        this.getFooterContent(
+            this.getPopupBlockCallback(block),
+            this.getMoreOffersLinkText()
+        )
+    );
+    return this.getDOMBlock(this.innerBlockID, result);
+},
+
+getShortPopupBlock: function (block) {
+    if (!this.getShortOfferCount()) {
+        return this.getShortBlock(
+            this.getNothingFoundBlock(),
+            block
+        );
+    }
+    var result = '';
+    result += this.get_div_open_tag(
+        {},
+        {
+            'width': this.settings.offer_block.width
+        }
+    );
+        result += this.getHeaderBlock();
+        result += this.getShopList(
+            this.getShortOfferCount()
+        );
+        result += this.getFooterBlock(
+            this.getFooterContent(
+                this.getReplaceCallback(block),
+                this.getMoreOffersLinkText()
+            )
+        );
+    result += this.get_div_close_tag();
+    return this.getShortBlock(result, block);
+},
+
+// popup extended block:
+getFullPopupBlock: function (block) {
+    var result = '';
+    result += this.get_div_open_tag(
+        {},
+        {
+            'width': this.settings.offer_block.width
+        }
+    );
+        result += this.getHeaderBlock();
+        result += this.getShopList(
+            this.getExtendedOfferCount()
+        );
+        result += this.getFooterBlock(
+            this.getFooterContent(
+                // this.showShortBlockCallback(block),
+                this.getCloseHandler(block),
+                this.getLessOffersLinkText()
+            )
+        );
+    result += this.get_div_close_tag();
+    return this.getFullBlock(result, block);
+},
+
+switchBlocks: function (show_id, hide_id) {
+    var show_block = document.getElementById(show_id);
+    if (!show_block) {
+        return;
+    }
+    var hide_block = document.getElementById(hide_id);
+    if (!hide_block) {
+        return;
+    }
+    hide_block.style.display = 'none';
+    show_block.style.display = 'block';
+},
+
+getShortListBlockId: function () {
+    if (!this.shortBlockId) {
+        this.shortBlockId = this.get_random_id();
+    }
+    return this.shortBlockId;
+},
+
+getFullListBlockId: function () {
+    if (!this.fullBlockId) {
+        this.fullBlockId = this.get_random_id();
+    }
+    return this.fullBlockId;
+},
+
+showShortListBlock: function () {
+    this.switchBlocks(
+        this.getShortListBlockId(),
+        this.getFullListBlockId()
+    );
+},
+
+showFullListBlock: function () {
+    this.switchBlocks(
+        this.getFullListBlockId(),
+        this.getShortListBlockId()
+    );
+},
+
+redirectURL: function () {
+    if (this.getEventType() == 'click'
+        && !this.getShortOfferCount()
+        && this.settings.popup_block.redirect_url) {
+            document.location.href = this.settings.popup_block.redirect_url;
+            return true;
+    }
+    return false;
+},
+
+popupBlockScenary: function () {
+    var block = document.createElement('div');
+    
+    block.style['display'] = 'block';
+    block.style['font-size'] = 0;
+    block.style['fontSize'] = 0;
+    block.style['line-height'] = 0;
+    block.style['lineHeight'] = 0;
+    block.style['position'] = 'absolute';
+    block.style['visibility'] = 'hidden';
+    block.style['left'] = '0px';
+    block.style['top'] = '0px';
+    block.style['zIndex'] = 999999;
+    block.style['z-index'] = 999999;
+    
+    block.appendChild(this.getShortPopupBlock(block));
+    if (this.getShortOfferCount() < this.getExtendedOfferCount()) {
+        block.appendChild(this.getFullPopupBlock(block));
+        this.showShortListBlock();
+    }
+    
+    this.appendToDOM(block);
+    this.appendShopNameList();
+    this.setBlockHandlers(block);
+    
+    var coords = this.getEventCoords();
+    if (coords && this.adapter.isActual()) {
+        this.adapter.activate(false, coords);
+    }
+},
+
+getBlockContainer: function () {
+    return this.adapter.getDivId() ? document.getElementById(this.adapter.getDivId()) : document.createElement('div');
+},
+
+staticBlockScenary: function () {
+    var block = this.getBlockContainer();
+    block.style.display = 'inline-block';
+    block.style['font-size'] = 0;
+    block.style['fontSize'] = 0;
+    block.style['line-leight'] = 0;
+    block.style['lineHeight'] = 0;
+    block.style['outline'] = 0;
+    block.style['margin-top'] = this.settings.static_block.margin_top;
+    block.style['marginTop'] = this.settings.static_block.margin_top;
+    block.style['margin-right'] = this.settings.static_block.margin_right;
+    block.style['marginRight'] = this.settings.static_block.margin_right;
+    block.style['margin-bottom'] = this.settings.static_block.margin_bottom;
+    block.style['marginBottom'] = this.settings.static_block.margin_bottom;
+    block.style['margin-left'] = this.settings.static_block.margin_left;
+    block.style['marginLeft'] = this.settings.static_block.margin_left;
+    var content = this.getShortStaticBlock(block);
+    if (content) {
+        block.appendChild(content);
+        this.appendToDOM(block);
+        this.appendShopNameList();
+    }
+},
+
+getSortingParamName: function () {
+    return (
+        this.settings.offer_block.comparing_param_name
+        ? this.settings.offer_block.comparing_param_name
+        : this.getDefaultSortingParamName()
+    );
+},
+
+draw: function (adapter) {
+    if (!adapter || !adapter.getLoadEvent()) {
+        return;
+    }
+    
+    if (!this.data || !this.data.advs.length) {
+        if (this.params.alt_text) {
+            var alt_text = this.params.alt_text;
+            if (alt_text.substr(0, 11) == "topadvert.v" && topadvert[alt_text.substr(10)]) {
+                this.data = {
+                    advs: [{
+                        "num": 1,
+                        "items": [topadvert[alt_text.substr(10)]]
+                    }]
+                };
+            }
+        }
+    }
+    
+    this.adapter = adapter;
+    if (this.adapter.getLoadEvent() == 'page_load') {
+        this.staticBlockScenary();
+    } else if (this.adapter.getLoadEvent() == 'mouse_action') {
+        this.popupBlockScenary();
+    }
+},
+
+getNothingFoundBlock: function () {
+    var result = '';
+    result += this.get_table_open_tag(
+        {},
+        {
+            'width': '100%'
+        }
+    );
+        result += this.get_tbody_open_tag();
+        result += this.get_tr_open_tag();
+            result += this.get_td_open_tag(
+                {},
+                {
+                    'background-color': this.settings.nothing_found.background_color
+                }
+            );
+                result += this.get_div_open_tag(
+                    {},
+                    {
+                        'color': this.settings.nothing_found.color,
+                        'display': 'block',
+                        'font-family': this.cleanSettingsValue(this.settings.nothing_found.font_family),
+                        'fontFamily': this.cleanSettingsValue(this.settings.nothing_found.font_family),
+                        'font-size': this.settings.nothing_found.font_size,
+                        'fontSize': this.settings.nothing_found.font_size,
+                        'font-style': this.settings.nothing_found.font_style,
+                        'fontStyle': this.settings.nothing_found.font_style,
+                        'font-weight': (this.toInt(this.settings.nothing_found.bold) ? 'bold' : 'normal'),
+                        'fontWeight': (this.toInt(this.settings.nothing_found.bold) ? 'bold' : 'normal'),
+                        'line-height': this.settings.nothing_found.font_size,
+                        'lineHeight': this.settings.nothing_found.font_size,
+                        'margin-top': this.settings.nothing_found.margin_top,
+                        'marginTop': this.settings.nothing_found.margin_top,
+                        'margin-right': this.settings.nothing_found.margin_right,
+                        'marginRight': this.settings.nothing_found.margin_right,
+                        'margin-bottom': this.settings.nothing_found.margin_bottom,
+                        'marginBottom': this.settings.nothing_found.margin_bottom,
+                        'margin-left': this.settings.nothing_found.margin_left,
+                        'marginLeft': this.settings.nothing_found.margin_left,
+                        'outline': 0,
+                        'padding-bottom': this.settings.general.vertical_align_fixer,
+                        'paddingBottom': this.settings.general.vertical_align_fixer,
+                        'text-align': this.settings.nothing_found.align,
+                        'textAlign': this.settings.nothing_found.align
+                    }
+                );
+                    result += this.settings.nothing_found.text;
+                result += this.get_div_close_tag();
+            result += this.get_td_close_tag();
+        result += this.get_tr_close_tag();
+        result += this.get_tbody_close_tag();
+    result += this.get_table_close_tag();
+    return result;
+},
+
+getShopListLength: function (max_length) {
+    var result = 0;
+    if (!this.data.hasOwnProperty('advs')) {
+        return result;
+    }
+    var shop_list = this.data.advs;
+    var shop_list_length = shop_list.length;
+    if (max_length > 0) {
+        result = (max_length < shop_list_length ? max_length : shop_list_length);
+    } else {
+        result = shop_list_length;
+    }
+    return result;
+},
+
+getShopList: function (max_length) {
+    var shop_list_length = this.getShopListLength(this.toInt(max_length));
+    if (!shop_list_length) {
+        return '';
+    }
+    var result = '';
+    result += this.get_table_open_tag(
+        {},
+        {
+            'width': '100%'
+        }
+    );
+    result += this.get_tbody_open_tag();
+    if (this.isNonZeroValue(this.settings.offer_block_title.enabled)) {
+        result += this.get_tr_open_tag(
+            {},
+            {
+                'background-color': this.settings.offer_block_title.background_color,
+                'backgroundColor': this.settings.offer_block_title.background_color
+            }
+        );
+            result += this.get_td_open_tag();
+            result += this.get_td_close_tag();
+            
+            result += this.get_td_open_tag();
+                result += this.get_div_open_tag(
+                    {},
+                    {
+                        'color': this.settings.offer_block_title.color,
+                        'display': 'block',
+                        'font-family': this.cleanSettingsValue(this.settings.offer_block_title.font_family),
+                        'fontFamily': this.cleanSettingsValue(this.settings.offer_block_title.font_family),
+                        'font-size': this.settings.offer_block_title.font_size,
+                        'fontSize': this.settings.offer_block_title.font_size,
+                        'font-style': this.settings.offer_block_title.font_style,
+                        'fontStyle': this.settings.offer_block_title.font_style,
+                        'font-weight': (this.isNonZeroValue(this.settings.offer_block_title.bold) ? 'bold' : 'normal'),
+                        'fontWeight': (this.isNonZeroValue(this.settings.offer_block_title.bold) ? 'bold' : 'normal'),
+                        'line-height': this.settings.offer_block_title.font_size,
+                        'lineHeight': this.settings.offer_block_title.font_size,
+                        'margin-bottom': this.settings.general.outline,
+                        'marginBottom': this.settings.general.outline,
+                        'outline': 0,
+                        'text-align': 'left',
+                        'textAlign': 'left',
+                        'white-space': 'nowrap',
+                        'whiteSpace': 'nowrap'
+                    }
+                );
+                    result += this.settings.shop_name.title;
+                result += this.get_div_close_tag();
+            result += this.get_td_close_tag();
+            
+            if (this.isNonZeroValue(this.settings.price.enabled)) {
+                result += this.get_td_open_tag();
+                    result += this.get_div_open_tag(
+                        {},
+                        {
+                            'color': this.settings.offer_block_title.color,
+                            'display': 'block',
+                            'font-family': this.cleanSettingsValue(this.settings.offer_block_title.font_family),
+                            'fontFamily': this.cleanSettingsValue(this.settings.offer_block_title.font_family),
+                            'font-size': this.settings.offer_block_title.font_size,
+                            'fontSize': this.settings.offer_block_title.font_size,
+                            'font-style': this.settings.offer_block_title.font_style,
+                            'fontStyle': this.settings.offer_block_title.font_style,
+                            'font-weight': (this.isNonZeroValue(this.settings.offer_block_title.bold) ? 'bold' : 'normal'),
+                            'fontWeight': (this.isNonZeroValue(this.settings.offer_block_title.bold) ? 'bold' : 'normal'),
+                            'line-height': this.settings.offer_block_title.font_size,
+                            'lineHeight': this.settings.offer_block_title.font_size,
+                            'margin-bottom': this.settings.general.outline,
+                            'marginBottom': this.settings.general.outline,
+                            'margin-left': this.settings.general.indent,
+                            'marginLeft': this.settings.general.indent,
+                            'outline': 0,
+                            'text-align': 'right',
+                            'textAlign': 'right'
+                        }
+                    );
+                        result += this.settings.price.title;
+                    result += this.get_div_close_tag();
+                result += this.get_td_close_tag();
+            }
+            
+            result += this.get_td_open_tag();
+            result += this.get_td_close_tag();
+        result += this.get_tr_close_tag();
+    }
+    for (var i=0; i<shop_list_length; i++) {
+        if (this.data.advs[i].items[0].shopNameBlockIdList === undefined) {
+            this.data.advs[i].items[0].shopNameBlockIdList = new Array();
+        }
+        this.data.advs[i].items[0].shopNameBlockIdList.push(this.get_random_id());
+        var item = this.data.advs[i].items[0];
+        if (!item) {
+            continue;
+        }
+        result += this._getOfferBlock({
+            'count': i,
+            'item': item,
+            'shop_name_elem_id': item.shopNameBlockIdList[item.shopNameBlockIdList.length - 1]
+        });
+    }
+    result += this.get_tbody_close_tag();
+    result += this.get_table_close_tag();
+    return result;
+},
+
+_getOfferBlock: function (args) {
+    var bgcolor = (args.count%2 ? this.settings.offer_block.odd_bgcolor : this.settings.offer_block.even_bgcolor);
+    var item = args.item;
+    
+    var shop_name_elem_id = args.shop_name_elem_id;
+    var price_elem_id = this.get_random_id();
+    
+    var that = this;
+    
+    var mouseover_call = function (args) {
+        var shop_name_elem_id = args.shop_name_elem_id;
+        var price_elem_id = args.price_elem_id;
+        return function () {
+            var shop_name_elem = document.getElementById(shop_name_elem_id);
+            if (shop_name_elem) {
+                shop_name_elem.style['color'] = that.settings.shop_name.onmouseover_color;
+                shop_name_elem.style['text-decoration'] = (that.toInt(that.settings.shop_name.mouseover_underline) ? 'underline' : 'none');
+                shop_name_elem.style['textDecoration'] = (that.toInt(that.settings.shop_name.mouseover_underline) ? 'underline' : 'none');
+            }
+            var price_elem = document.getElementById(price_elem_id);
+            if (price_elem) {
+                price_elem.style['color'] = that.settings.price.onmouseover_color;
+                price_elem.style['text-decoration'] = (that.toInt(that.settings.price.mouseover_underline) ? 'underline' : 'none');
+                price_elem.style['textDecoration'] = (that.toInt(that.settings.price.mouseover_underline) ? 'underline' : 'none');
+            }
+        };
+    };
+    var mouseover_callback = this.get_random_callback(
+        mouseover_call({
+            'shop_name_elem_id': shop_name_elem_id,
+            'price_elem_id': price_elem_id
+        })
+    );
+    
+    var mouseout_call = function (args) {
+        var shop_name_elem_id = args.shop_name_elem_id;
+        var price_elem_id = args.price_elem_id;
+        return function () {
+            var shop_name_elem = document.getElementById(shop_name_elem_id);
+            if (shop_name_elem) {
+                shop_name_elem.style['color'] = that.settings.shop_name.color;
+                shop_name_elem.style['text-decoration'] = (that.toInt(that.settings.shop_name.underline) ? 'underline' : 'none');
+                shop_name_elem.style['textDecoration'] = (that.toInt(that.settings.shop_name.underline) ? 'underline' : 'none');
+            }
+            var price_elem = document.getElementById(price_elem_id);
+            if (price_elem) {
+                price_elem.style['color'] = that.settings.price.color;
+                price_elem.style['text-decoration'] = (that.toInt(that.settings.price.underline) ? 'underline' : 'none');
+                price_elem.style['textDecoration'] = (that.toInt(that.settings.price.underline) ? 'underline' : 'none');
+            }
+        };
+    };
+    var mouseout_callback = this.get_random_callback(
+        mouseout_call({
+            'shop_name_elem_id': shop_name_elem_id,
+            'price_elem_id': price_elem_id
+        })
+    );
+    
+    var result = '';
+    result += this.get_tr_open_tag(
+        {},
+        {
+            'background-color': bgcolor,
+            'backgroundColor': bgcolor,
+            'outline': 0
+        }
+    );
+        result += this._getIndentCell({
+            'bgcolor': bgcolor
+        });
+        
+        result += this.get_td_open_tag(
+            {},
+            {
+                'background-color': bgcolor,
+                'backgroundColor': bgcolor,
+                'vertical-align': this.settings.shop_name.valign,
+                'verticalAlign': this.settings.shop_name.valign,
+                'width': '100%'
+            }
+        );
+            result += this.get_table_open_tag(
+                {},
+                {
+                    'height': '100%',
+                    'width': '100%'
+                }
+            );
+                result += this.get_tbody_open_tag();
+                result += this.get_tr_open_tag();
+                    if (this.isNonZeroValue(this.settings.favicon.enabled)) {
+                        result += this.get_td_open_tag(
+                            {},
+                            {
+                                'background-color': bgcolor,
+                                'backgroundColor': bgcolor,
+                                'vertical-align': this.settings.favicon.valign,
+                                'verticalAlign': this.settings.favicon.valign,
+                                'width': this.settings.favicon.width
+                            }
+                        );
+                            result += this.get_div_open_tag(
+                                {
+                                    'onmouseover': mouseover_callback + ';',
+                                    'onmouseout': mouseout_callback + ';'
+                                },
+                                {
+                                    'border': 0,
+                                    'display': 'block',
+                                    'font-size': 0,
+                                    'fontSize': 0,
+                                    'line-height': 0,
+                                    'lineHeight': 0,
+                                    'outline': 0
+                                }
+                            );
+                                result += this.getFavIcon(item);
+                            result += this.get_div_close_tag();
+                        result += this.get_td_close_tag();
+                        
+                        result += this._getIndentCell({
+                            'bgcolor': bgcolor
+                        });
+                    }
+                    result += this.get_td_open_tag();
+                        result += this.get_a_open_tag(
+                            {
+                                'id': 'lnk' + shop_name_elem_id,
+                                'href': item.url + this.getUtmParamString({'click_id': 1}),
+                                'onmouseover': mouseover_callback + ';',
+                                'onmouseout': mouseout_callback + ';',
+                                'target': '_blank'
+                            },
+                            {
+                                'display': 'block',
+                                'font-size': 0,
+                                'fontSize': 0,
+                                'line-height': 0,
+                                'lineHeight': 0,
+                                'outline': 0,
+                                'text-decoration': 'none',
+                                'textDecoration': 'none',
+                                'width': '100%'
+                            }
+                        );
+                            result += this.get_div_open_tag(
+                                {},
+                                {
+                                    'display': 'block',
+                                    'font-size': 0,
+                                    'fontSize': 0,
+                                    'line-height': 0,
+                                    'lineHeight': 0,
+                                    'margin-top': this.settings.general.outline,
+                                    'marginTop': this.settings.general.outline,
+                                    'margin-bottom': this.settings.general.outline,
+                                    'marginBottom': this.settings.general.outline,
+                                    'outline': 0
+                                }
+                            );
+                                result += this.get_div_open_tag(
+                                    {
+                                        'id': shop_name_elem_id
+                                    },
+                                    {
+                                        'color': this.settings.shop_name.color,
+                                        'cursor': 'pointer',
+                                        'font-family': this.cleanSettingsValue(this.settings.offer_block.font_family),
+                                        'fontFamily': this.cleanSettingsValue(this.settings.offer_block.font_family),
+                                        'font-style': this.settings.shop_name.font_style,
+                                        'fontStyle': this.settings.shop_name.font_style,
+                                        'font-size': this.settings.shop_name.font_size,
+                                        'fontSize': this.settings.shop_name.font_size,
+                                        'font-weight': (this.toInt(this.settings.shop_name.bold) ? 'bold' : 'normal'),
+                                        'fontWeight': (this.toInt(this.settings.shop_name.bold) ? 'bold' : 'normal'),
+                                        'line-height': this.settings.shop_name.font_size,
+                                        'lineHeight': this.settings.shop_name.font_size,
+                                        'outline': 0,
+                                        'padding-bottom': this.settings.general.vertical_align_fixer,
+                                        'text-align': this.settings.shop_name.align,
+                                        'textAlign': this.settings.shop_name.align,
+                                        'text-decoration': (this.toInt(this.settings.shop_name.underline) ? 'underline' : 'none'),
+                                        'textDecoration': (this.toInt(this.settings.shop_name.underline) ? 'underline' : 'none'),
+                                        'width': '100%'
+                                    }
+                                );
+                                    // result += this.getWrappedShopName(item);
+                                    result += this.gag();
+                                result += this.get_div_close_tag();
+                            result += this.get_div_close_tag();
+                        result += this.get_a_close_tag();
+                    result += this.get_td_close_tag();
+                result += this.get_tr_close_tag();
+                result += this.get_tbody_close_tag();
+            result += this.get_table_close_tag();
+        result += this.get_td_close_tag();
+        
+        // TODO: price column
+        if (this.isNonZeroValue(this.settings.price.enabled)) {
+            result += this.get_td_open_tag(
+                {},
+                {
+                    'background-color': bgcolor,
+                    'backgroundColor': bgcolor,
+                    'vertical-align': this.settings.price.valign,
+                    'verticalAlign': this.settings.price.valign,
+                    'text-align': 'right',
+                    'textAlign': 'right'
+                }
+            );
+                result += this.get_a_open_tag(
+                    {
+                        'href': item.url + this.getUtmParamString({'click_id': 4}),
+                        'onmouseover': mouseover_callback + ';',
+                        'onmouseout': mouseout_callback + ';',
+                        'target': '_blank'
+                    },
+                    {
+                        'display': 'block',
+                        'font-size': 0,
+                        'fontSize': 0,
+                        'line-height': 0,
+                        'lineHeight': 0,
+                        'outline': 0,
+                        'text-decoration': 'none',
+                        'textDecoration': 'none',
+                        'width': '100%'
+                    }
+                );
+                result += this.get_div_open_tag(
+                    {
+                        'id': price_elem_id
+                    },
+                    {
+                        'color': this.settings.price.color,
+                        'display': 'block',
+                        'font-family': this.cleanSettingsValue(this.settings.offer_block.font_family),
+                        'fontFamily': this.cleanSettingsValue(this.settings.offer_block.font_family),
+                        'font-style': this.settings.price.font_style,
+                        'fontStyle': this.settings.price.font_style,
+                        'font-size': this.settings.price.font_size,
+                        'fontSize': this.settings.price.font_size,
+                        'font-weight': (this.toInt(this.settings.price.bold) ? 'bold' : 'normal'),
+                        'fontWeight': (this.toInt(this.settings.price.bold) ? 'bold' : 'normal'),
+                        'line-height': this.settings.price.font_size,
+                        'lineHeight': this.settings.price.font_size,
+                        'margin-top': this.settings.general.outline,
+                        'marginTop': this.settings.general.outline,
+                        'margin-bottom': this.settings.general.outline,
+                        'marginBottom': this.settings.general.outline,
+                        'margin-left': this.settings.general.indent,
+                        'marginLeft': this.settings.general.indent,
+                        'outline': 0,
+                        'padding-bottom': this.settings.general.vertical_align_fixer,
+                        'text-align': 'right',
+                        'textAlign': 'right',
+                        'text-decoration': (this.toInt(this.settings.price.underline) ? 'underline' : 'none'),
+                        'textDecoration': (this.toInt(this.settings.price.underline) ? 'underline' : 'none')
+                    }
+                );
+                    result += this.getWrappedPrice(item);
+                result += this.get_div_close_tag();
+                result += this.get_a_close_tag();
+            result += this.get_td_close_tag();
+        }
+        
+        result += this._getIndentCell({
+            'bgcolor': bgcolor
+        });
+    result += this.get_tr_close_tag();
+    return result;
+},
+
+_getIndentCell: function (styles) {
+    var result = '';
+    result += this.get_td_open_tag(
+        {},
+        {
+            'background-color': styles.bgcolor,
+            'backgroundColor': styles.bgcolor,
+            'width': this.settings.general.indent
+        }
+    );
+        result += this.get_div_open_tag(
+            {},
+            {
+                'display': 'block',
+                'font-size': 0,
+                'fontSize': 0,
+                'line-height': 0,
+                'lineHeight': 0,
+                'outline': 0,
+                'width': this.settings.general.indent
+            }
+        );
+        result += this.get_div_close_tag();
+    result += this.get_td_close_tag();
+    return result;
+},
+
+getFavIcon: function (item) {
+    var result = '';
+    result += this.get_a_open_tag(
+        {
+            'href': item.url + this.getUtmParamString({'click_id': 1})
+        },
+        {}
+    );
+        result += this.get_img_tag(
+            {
+                'src': item.adv_favicon
+            },
+            {
+                'border': 0,
+                'display': 'block',
+                'height': this.settings.favicon.height,
+                'margin-top': this.settings.favicon.indent,
+                'marginTop': this.settings.favicon.indent,
+                'margin-bottom': this.settings.favicon.indent,
+                'marginBottom': this.settings.favicon.indent,
+                'outline': 0,
+                'vertical-align': this.settings.favicon.valign,
+                'verticalAlign': this.settings.favicon.valign,
+                'width': this.settings.favicon.width
+            }
+        );
+    result += this.get_a_close_tag();
+    return result;
+},
+
+getItemTitle: function (item) {
+    return this.escapeHTML(item.title);
+},
+
+getShopName: function (item) {
+    return this.escapeHTML(item.shop_name);
+},
+
+getPriceString: function (item) {
+    return item.cost + '&nbsp;' + this.get_currency_string(item.currency);
+},
+
+substituteVariables: function (item, string) {
+    if (!item || !string) {
+        return '';
+    }
+/*
+    %SHOP%  -- shop name
+    %TITLE% -- item name
+    %PRICE% -- item price
+*/
+    var result = string;
+    result = result.replace(/%TITLE%/i, this.getItemTitle(item));
+    result = result.replace(/%SHOP%/i, this.getShopName(item));
+    result = result.replace(/%PRICE%/i, this.getPriceString(item));
+    return result;
+},
+
+getWrappedShopName: function (item) {
+    if (!item) {
+        return '';
+    }
+    if (!this.settings.shop_name.format) {
+        return this.getShopName(item);
+    }
+    return this.substituteVariables(
+        item,
+        this.settings.shop_name.format
+    );
+},
+
+getWrappedPrice: function (item) {
+    if (!item) {
+        return '';
+    }
+    if (!this.settings.price.format) {
+        return this.getPriceString(item);
+    }
+    return this.substituteVariables(
+        item,
+        this.settings.price.format
+    );
+},
+
+gag: function () {
+    var result = '';
+    result += this.get_div_open_tag(
+        {},
+        {
+            'display': 'block',
+            'width': '1px',
+            'height': '1px',
+            'visibility': 'hidden'
+        }
+    );
+    result += this.get_div_close_tag();
+    return result;
+},
+
+getShopNameWidth: function (str) {
+    if (!str) {
+        return 0;
+    }
+    var b = document.createElement('span');
+    b.style.visibility = 'visible';
+    b.style.position = 'absolute';
+    b.style['font-family'] = this.cleanSettingsValue(this.settings.offer_block.font_family);
+    b.style['fontFamily'] = this.cleanSettingsValue(this.settings.offer_block.font_family);
+    b.style['font-style'] = this.settings.shop_name.font_style;
+    b.style['fontStyle'] = this.settings.shop_name.font_style;
+    b.style['font-size'] = this.settings.shop_name.font_size;
+    b.style['fontSize'] = this.settings.shop_name.font_size;
+    b.style['font-weight'] = (this.toInt(this.settings.shop_name.bold) ? 'bold' : 'normal');
+    b.style['fontWeight'] = (this.toInt(this.settings.shop_name.bold) ? 'bold' : 'normal');
+    b.style.padding = 0;
+    document.body.appendChild(b);
+    b.innerHTML = str.replace(/\s+/g, "<br/>") + '<br/>';
+    var res = b.offsetWidth;
+    document.body.removeChild(b);
+    return res;
+},
+
+appendShopNameList: function () {
+    var eWidth = 0;
+    for (var i=0; i<this.data.advs.length; i++) {
+        // IMPORTANT: this loop must process extended list before short:
+        var item = this.data.advs[this.data.advs.length - i - 1].items[0];
+        if (item.shopNameBlockIdList) {
+            for (var j=0; j<item.shopNameBlockIdList.length; j++) {
+                var el = document.getElementById(item.shopNameBlockIdList[j]);
+                if (!eWidth) {
+                    eWidth = el.offsetWidth;
+                }
+                el.style.overflow = 'hidden';
+                el.style['text-overflow'] = 'ellipsis';
+                el.style['textOverflow'] = 'ellipsis';
+                if (eWidth) {
+                    el.style.width = eWidth + 'px';
+                }
+                el.innerHTML = this.getWrappedShopName(item);
+                var shop_name = this.escapeHTML(item.shop_name);
+                if (this.getShopNameWidth(shop_name) >= eWidth) {
+                    var link = document.getElementById('lnk' + item.shopNameBlockIdList[j]);
+                    link.title = shop_name;
+                }
+            }
+        }
+    }
+}
+});
+;
+                    this._factory = this._componentFactories[''];
+                    this._factory.create(this._data, this._params).draw(this._adapter);
+                }
+            }).init()
+        );
